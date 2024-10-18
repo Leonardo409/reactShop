@@ -1,0 +1,518 @@
+:root {
+    --top-category-border: 1px rgb(228, 228, 228) solid;
+}
+
+/* top categories */
+
+
+.section-top-categories {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.body-top-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+}
+
+.top-categories-card {
+    flex: 1;
+}
+
+.top-categories-description {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-categorie-main {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+.category-main-image {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.secondary-image-container:last-child {
+    border-right: none;
+}
+
+.category-secondary-image {
+    width: 50px;
+    height: 50px;
+    padding: 15px 15px 15px 15px;
+}
+
+.secondary-image-container {
+    border-right: var(--top-category-border);
+    display: grid;
+    place-content: center;
+}
+
+.secondary-image-container img {
+    object-fit: contain;
+}
+
+.top-categories-samples {
+    border-top: var(--top-category-border);
+    border-bottom: var(--top-category-border);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.top-categories-card {
+    border: var(--top-category-border);
+    border-radius: 1%;
+}
+
+.top-categories-description {
+    display: flex;
+    justify-content: space-around;
+}
+
+.top-categories-card img:hover {
+    scale: 1.2;
+    transition: all .3s;
+}
+
+.top-categories-btn {
+    border-radius: 100px;
+    width: 120px;
+    height: 35px;
+    border: var(--top-category-border);
+    background-color: transparent;
+}
+
+.top-categories-btn:hover {
+    transition: all .2s;
+    border: 1px red solid;
+    color: red;
+    cursor: pointer;
+}
+
+/* Season sale section  */
+
+.section-season-sale {
+    display: grid;
+    place-content: center;
+    background: url('../media/newbanner.jpg');
+    height: 30vh;
+    color: white;
+    position: relative;
+    width: 100%;
+}
+
+.section-season-sale::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.season-sale-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    gap: 15px;
+}
+
+.season-sale-text p {
+    max-width: 0px;
+    text-wrap: nowrap;
+    overflow: hidden;
+    animation: grow 7s infinite steps(70, end);
+    position: relative;
+}
+
+.season-sale-text p::after {
+    content: '|';
+    position: absolute;
+    right: 0;
+    margin: -1px;
+}
+
+
+
+@keyframes grow {
+    0% {
+        max-width: 0%;
+    }
+
+    50% {
+        max-width: 100%;
+    }
+
+    100% {
+        max-width: 100%;
+    }
+}
+
+.season-sale-text h1 {
+    margin: 0;
+}
+
+.mask {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.454);
+}
+
+.sale-btn {
+    width: 170px;
+    height: 50px;
+    border-radius: 100px;
+    border: none;
+    font-weight: bold;
+    transition: all .3s;
+}
+
+.sale-btn:hover {
+    background-color: rgb(255, 55, 55);
+    cursor: pointer;
+
+    color: white;
+}
+
+
+/* section-top-collection */
+
+.top-collection-container {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+}
+
+.top-colection-cards-container {
+    display: flex;
+    max-width: 1024px;
+    gap: 50px;
+    align-items: center;
+    animation: scroll 60s linear infinite;
+    animation-delay: 4s;
+}
+
+
+.section-top-collection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.collection-image-container {
+    display: flex;
+    justify-content: center;
+}
+
+
+.collection-card {
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.collection-image {
+    max-width: 250px;
+    max-height: 204px;
+    object-fit: contain;
+}
+
+.collection-description {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.collection-descriptio-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+
+.background-btn {
+    position: absolute;
+    top: 400px;
+    width: 100%;
+    height: 50px;
+    border: none;
+    opacity: 1;
+    transition: all .4s;
+    display: grid;
+    place-content: center;
+    /* background-color: rgba(234, 234, 234, 0.518); */
+}
+
+.collection-btn {
+    background-color: red;
+    color: white;
+    width: 120px;
+    height: 30px;
+    border-radius: 100px;
+    border: none;
+
+}
+
+.collection-card:hover .background-btn {
+    opacity: 1;
+    top: 160px;
+
+
+}
+
+/* body layouts */
+
+
+
+.page-layouts {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+
+}
+
+/* card  */
+
+
+.bodyBox {
+    margin: 50px 0px;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center; */
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1024px;
+}
+
+.card-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 1 400px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.card-box:hover {
+    border: red solid 2px;
+}
+
+.card-explain {
+    display: flex;
+    gap: 20px
+}
+
+.card-image {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.description-box {
+    width: 50%;
+    margin: 10px;
+
+}
+
+.card-description {
+    display: none;
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+
+}
+
+.card-see-more {
+    position: relative;
+}
+
+/* deals section */
+
+.deals-img {}
+
+.deals-item-description {
+    display: grid;
+    place-content: center;
+    flex: 1 1;
+}
+
+.deals-image {
+    flex: 1 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.deals-img {
+    position: absolute;
+    height: 100%;
+    animation: move 3s infinite;
+    object-fit: contain;
+    flex: 1 1;
+}
+
+/* section-get-follo */
+
+
+.get-follow-header {
+    display: grid;
+    place-content: center;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.get-follow-header p {
+    margin: 0;
+}
+
+.get-follow-items-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+
+.get-follow-item {
+    flex-basis: auto;
+    max-width: 150px;
+    position: relative;
+    padding: 5px;
+}
+
+.get-follow-item:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: .2s opacity;
+
+}
+
+.get-follow-item:hover::after {
+    opacity: 1;
+}
+
+.get-follow-item img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1;
+    object-fit: contain;
+}
+
+.heart {
+    position: absolute;
+    left: 49%;
+    opacity: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    z-index: 99999;
+    transition: .5s opacity;
+}
+
+.get-follow-item:hover .heart {
+    opacity: 1;
+}
+
+.heart:hover {
+    fill: red;
+    cursor: pointer;
+}
+
+
+/* section newsletter */
+
+
+
+.newsletter-section {
+    flex-direction: column;
+}
+
+.submit-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.submit-container input {
+    outline: none;
+    border: none;
+    padding: 10px;
+}
+
+.submit-container input {
+    flex: 1;
+    max-width: 300px;
+}
+
+.submit-container button {
+    flex: 1;
+}
+
+.header-btn {
+    max-width: 170px;
+}
+
+.newsletter-header {
+    margin-bottom: 40px;
+}
+
+
+@keyframes move {
+    0% {
+        margin-top: 0
+    }
+
+    50% {
+        margin-top: 10px;
+    }
+}
+
+
+@keyframes scroll {
+    0% {
+        margin-left: 0%
+    }
+
+    25% {
+        margin-left: -365%
+    }
+
+    50% {
+        margin-left: -730%
+    }
+
+    75% {
+        margin-left: -365%
+    }
+
+    100% {
+        margin-left: 0%
+    }
+}
